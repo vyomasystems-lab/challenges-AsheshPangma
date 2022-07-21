@@ -17,6 +17,6 @@ async def test_mux(dut):
 
         await Timer(2, units='ns')
         
-        dut._log.info(f'SEL={(SEL):05} model={sel:05} DUT={int(dut.sel.value):05}')
+        dut._log.info(f'SEL={(SEL):05} model={SEL:05} DUT={int(dut.sel.value):05}')
         assert dut.sel.value == SEL, "Randomised test failed with: {SEL}".format(
             SEL=dut.sel.value)
